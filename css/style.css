@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@200;400;500;600&display=swap');
-
+@import ./reset.css;
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
 
 * {
     box-sizing: border-box;
-    font-family: 'lexend Deca', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
 }
 
 :root {
@@ -17,16 +17,185 @@
     --blue: #1b77f3;
     --red: #cf3c3f;   
 }
-
+main {
+    display: flex;
+}
 .login {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 500px;
     min-height: 100vh;
-    background-color: var(--red);
+    padding: clamp(35px, 8%, 70px);
 }
-    
-    
-    
+
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-riot {
+    width: 130px;
+    margin-bottom: 80px;
+}
+.title-login {
+    color: var(--deep-gray);
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+.login-label {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    background-color: var(--lightgray);
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9em;
+    padding: 25px 10px 10px;
+    font-weight: 600;
+    color: var(--deep-gray);
+}
+
+.login-label span {
+    position: absolute;
+    font-size: 0.8em;
+    font-weight: 700;
+    margin: 20px;
+    text-transform: uppercase;
+    color: var(--medium-gray);
+    cursor: text;
+    transition: all 200ms ease-in-out;
+}
+
+.input:focus {
+    background-color: var(--whitesmoke);
+    border: 2px solid var(--deep-gray);
+}
+
+.login-label .span-active {
+    font-size: 0.7em;
+    margin: 8px 10px;
+}
+
+.icons-login {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.icons-login img {
+    width: 20px;
+}
+
+.button-icons {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.icons-login .button-icons:nth-child(1) {
+    background-color: var(--blue);
+}
+
+.icons-login .button-icons:nth-child(2) {
+    background-color: var(--lightgray);
+}
+
+.icons-login .button-icons:nth-child(3) {
+    background-color: var(--black);
+}
+
+.label-checkbox {
+    width: 100%;
+    margin: 15px 0 50px;
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.input-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--lightgray);
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+.input-checkbox:checked {
+    background-color: var(--red);
+
+}
+.input-checkbox:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: 3px solid var(--white);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    margin: 2px 6px;
+}
+
+.button-login {
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+
+.button-login svg {
+    fill: var(--white);
+}
+
+.button-login:disabled {
+    cursor: auto;
+    background-color: var(--white);
+    border: 2px solid var(--lightgray);
+}
+
+.button-login:disabled svg {
+    fill: var(--medium-gray);
+}
+
+.login-link {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: var(--medium-gray);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.bg-content {
+    width: 100%;
+    background-image: url('./assets/imagem-bg.png');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
